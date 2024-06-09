@@ -1,0 +1,49 @@
+﻿<Window x:Class="Pairs.GameChooser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pairs"
+        mc:Ignorable="d"
+        Title="GameChooser" Height="450" Width="800"
+        WindowStartupLocation="Manual" 
+        Left="50" Top="50"
+        ResizeMode="NoResize"
+        Background="#376BCD">
+    <Grid>
+        <StackPanel Margin="35">
+            <Button Background="GreenYellow" Name="NewGame" Height="50" Width="130" Margin="20" FontSize="18" FontWeight="Bold" Click="NewGame_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                New Game
+            </Button>
+            <Button Background="GreenYellow" Name="OpenGame" Height="50" Width="130" Margin="20" FontSize="18" FontWeight="Bold" Click="OpenGame_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                Open Game
+            </Button>
+            <Button Background="GreenYellow" Name="Stats" Height="50" Width="130" Margin="20" FontSize="18" FontWeight="Bold" Click="Stats_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                Stats
+            </Button>
+            <Button Background="GreenYellow" Name="Exit" Height="50" Width="130" Margin="20" FontSize="18" FontWeight="Bold" Click="Exit_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                Exit
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

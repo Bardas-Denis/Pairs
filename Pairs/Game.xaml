@@ -1,0 +1,69 @@
+﻿<Window x:Class="Pairs.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pairs"
+        mc:Ignorable="d"
+        Title="Game" Height="700" Width="700"
+        WindowStartupLocation="Manual" 
+        Left="50" Top="50"
+        ResizeMode="NoResize"
+        Background="#376BCD"
+        >
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock  Grid.Row="0" Name="FinalMessage" Text="Congratulations!! You have passed to the next level!!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Visibility="Hidden">
+            <TextBlock.Foreground>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                    <GradientStopCollection>
+                        <GradientStop Color="#46FF00" Offset="0"/>
+                        <GradientStop Color="#B2FA0E" Offset="0.4"/>
+                        <GradientStop Color="#FFFF00" Offset="0.8"/>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.Effect>
+                <DropShadowEffect
+                 ShadowDepth="8"
+                 Direction="0"
+                 Color="DarkGreen"
+                 Opacity="0.9"
+                 BlurRadius="10"/>
+
+            </TextBlock.Effect>
+        </TextBlock>
+        <Grid Name="game" Grid.Row="0">
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button Background="GreenYellow" Name="backButton" Content="Back" FontSize="18" FontWeight="Bold" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="7" Click="backButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="GreenYellow" Name="saveButton" Content="Save game" FontSize="18" FontWeight="Bold" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7" Click="saveButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="GreenYellow" Name="nextLevelButton" Content="Next Level" FontSize="18" FontWeight="Bold" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="7" Visibility="Hidden" Click="nextLevelButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <!--<Label  Name="CurrentLevel" Content="{Binding Level, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="Level {0}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15">
+                
+            </Label>-->
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,5 @@
+Andrei ./Images/Image1.png
+Denis ./Images/Image6.png
+Bogdan ./Images/Image8.png
+Cosmin ./Images/Image7.png
+Bryan ./Images/Image2.pngCristi ./Images/Image4.png
